@@ -1,0 +1,28 @@
+def fSeries(N):
+    firstDigit=0
+    secondDigit=1
+    series=[0,1]
+    
+    for i in range(N):
+
+        newDigit=series[len(series)-1]+series[len(series)-2]
+        series.append(newDigit)
+        
+        #If N is >=1000 then you can use this part to check if the code is actually running or not(It's silly but will help beginners)
+        
+        # if (i%1000==0):
+        #    print("Going "+str(int(i/1000)))
+        
+    return series    
+
+
+#Driver's Code
+
+N=100
+fibonacciSeries=fSeries(N)
+
+#this next line will print the length of the last digit in the series
+#print(len(str(fibonacciSeries[N-1])))
+
+#Printing the last value in the series
+print(fibonacciSeries[N-1])
